@@ -1,0 +1,811 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+  #nonresponsive {
+    display: none;
+  }
+  #Responsiv {
+    display: block !important;
+  }
+}
+#nonresponsive #general-header {
+  padding: 30px 0;
+  width: 100%;
+}
+#nonresponsive #general-header .header-all {
+  display: flex;
+  justify-content: space-between;
+}
+#nonresponsive #general-header .header-all nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+#nonresponsive #general-header .header-all nav li {
+  list-style: none;
+}
+#nonresponsive #general-header .header-all nav li:hover .Homedropdown {
+  display: block;
+}
+#nonresponsive #general-header .header-all nav li:hover .Shopdropdown {
+  display: block;
+}
+#nonresponsive #general-header .header-all nav li:hover .Productdropdown {
+  display: block;
+}
+#nonresponsive #general-header .header-all nav li:hover .Blogdropdown {
+  display: block;
+}
+#nonresponsive #general-header .header-all nav li:hover .Pagedropdown {
+  display: block;
+}
+#nonresponsive #general-header .header-all nav li .navbar {
+  text-decoration: none;
+  font-family: "Marcellus", serif;
+  font-size: 18px;
+  color: #000;
+  opacity: 0.9;
+  position: relative;
+}
+#nonresponsive #general-header .header-all nav li .navbar:hover::before {
+  width: 100%;
+  left: 0;
+}
+#nonresponsive #general-header .header-all nav li .navbar::before {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+#nonresponsive #general-header .header-all nav li .navbar::after {
+  content: "\f107";
+  margin-left: 5px;
+  font-size: 12px;
+  font-family: FontAwesome;
+}
+#nonresponsive #general-header .header-all nav li .Shopdropdown {
+  position: absolute;
+  top: 12%;
+  left: 20%;
+  z-index: 22;
+  display: none;
+  background-color: white;
+  padding: 50px 70px;
+  text-align: left;
+  line-height: 40px;
+}
+#nonresponsive #general-header .header-all nav li .Shopdropdown .shopflex {
+  display: flex;
+  gap: 80px;
+}
+#nonresponsive #general-header .header-all nav li .Shopdropdown .shopflex span {
+  font-size: 18px;
+  display: inline-block;
+  margin: 5px 0;
+  font-family: "Marcellus", serif;
+  position: relative;
+}
+#nonresponsive #general-header .header-all nav li .Shopdropdown .shopflex span::before {
+  content: "";
+  width: 50%;
+  height: 1px;
+  background-color: #ac8b66;
+  position: absolute;
+  top: 30px;
+  margin-bottom: 10px;
+}
+#nonresponsive #general-header .header-all nav li .Shopdropdown .shopflex a {
+  display: block;
+  text-decoration: none;
+  color: #868686;
+  font-size: 17px;
+  font-weight: 400;
+}
+#nonresponsive #general-header .header-all nav li .Shopdropdown .shopflex a:hover {
+  color: #c0a483;
+}
+#nonresponsive #general-header .header-all nav li .Homedropdown {
+  z-index: 222;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  background-color: white;
+  padding: 20px 60px 20px 30px;
+  text-align: left;
+  line-height: 35px;
+  display: none;
+}
+#nonresponsive #general-header .header-all nav li .Homedropdown a {
+  display: block;
+  text-decoration: none;
+  color: #868686;
+  font-size: 17px;
+  font-weight: 400;
+}
+#nonresponsive #general-header .header-all nav li .Homedropdown a:hover {
+  color: #c0a483;
+}
+#nonresponsive #general-header .header-all nav li .Productdropdown {
+  line-height: 40px;
+  z-index: 222;
+  position: absolute;
+  top: 12%;
+  left: 20%;
+  background-color: white;
+  padding: 50px 70px;
+  text-align: left;
+  display: none;
+}
+#nonresponsive #general-header .header-all nav li .Productdropdown .productflex {
+  display: flex;
+  gap: 80px;
+}
+#nonresponsive #general-header .header-all nav li .Productdropdown .productflex span {
+  font-size: 18px;
+  display: inline-block;
+  margin: 5px 0;
+  font-family: "Marcellus", serif;
+  position: relative;
+}
+#nonresponsive #general-header .header-all nav li .Productdropdown .productflex span::before {
+  content: "";
+  width: 50%;
+  height: 1px;
+  background-color: #ac8b66;
+  position: absolute;
+  top: 30px;
+  margin-bottom: 10px;
+}
+#nonresponsive #general-header .header-all nav li .Productdropdown .productflex a {
+  display: block;
+  text-decoration: none;
+  color: #868686;
+  font-size: 17px;
+  font-weight: 400;
+}
+#nonresponsive #general-header .header-all nav li .Productdropdown .productflex a:hover {
+  color: #c0a483;
+}
+#nonresponsive #general-header .header-all nav li .Blogdropdown {
+  overflow: hidden;
+  line-height: 40px;
+  z-index: 222;
+  position: absolute;
+  top: 12%;
+  left: 20%;
+  background-color: white;
+  padding: 50px 70px 70px;
+  text-align: left;
+  display: none;
+}
+#nonresponsive #general-header .header-all nav li .Blogdropdown .blogflex {
+  display: flex;
+  gap: 80px;
+}
+#nonresponsive #general-header .header-all nav li .Blogdropdown .blogflex span {
+  font-size: 18px;
+  display: inline-block;
+  margin: 5px 0;
+  font-family: "Marcellus", serif;
+  position: relative;
+}
+#nonresponsive #general-header .header-all nav li .Blogdropdown .blogflex span::before {
+  content: "";
+  width: 50%;
+  height: 1px;
+  background-color: #ac8b66;
+  position: absolute;
+  top: 30px;
+  margin-bottom: 10px;
+}
+#nonresponsive #general-header .header-all nav li .Blogdropdown .blogflex a {
+  display: block;
+  text-decoration: none;
+  color: #868686;
+  font-size: 17px;
+  font-weight: 400;
+}
+#nonresponsive #general-header .header-all nav li .Blogdropdown .blogflex a:hover {
+  color: #c0a483;
+}
+#nonresponsive #general-header .header-all nav li .Blogdropdown .blogflex .Recentpost {
+  max-width: 475px;
+}
+#nonresponsive #general-header .header-all nav li .Blogdropdown .blogflex .Recentpost span {
+  font-size: 18px;
+}
+#nonresponsive #general-header .header-all nav li .Blogdropdown .blogflex .Recentpost .blog {
+  font-family: Marcellus, serif;
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+#nonresponsive #general-header .header-all nav li .Blogdropdown .blogflex .Recentpost .blog .blogimg {
+  width: 25%;
+  height: auto;
+}
+#nonresponsive #general-header .header-all nav li .Blogdropdown .blogflex .Recentpost .blog .blogimg img {
+  width: 100%;
+  height: auto;
+}
+#nonresponsive #general-header .header-all nav li .Blogdropdown .blogflex .Recentpost .blog .blogcontent .prv::before {
+  content: "|";
+  width: 100%;
+  height: 1px;
+  color: #e2e2e2;
+  margin: 0 5px;
+}
+#nonresponsive #general-header .header-all nav li .Blogdropdown .blogflex .Recentpost .blog .blogcontent a {
+  font-family: Open Sans, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  display: inline;
+  color: #868686;
+}
+#nonresponsive #general-header .header-all nav li .Pagedropdown {
+  z-index: 222;
+  position: absolute;
+  top: 10%;
+  left: 57%;
+  background-color: white;
+  padding: 20px 100px 20px 30px;
+  text-align: left;
+  line-height: 35px;
+  display: none;
+}
+#nonresponsive #general-header .header-all nav li .Pagedropdown a {
+  display: block;
+  text-decoration: none;
+  color: #868686;
+  font-size: 17px;
+  font-weight: 400;
+}
+#nonresponsive #general-header .header-all nav li .Pagedropdown a:hover {
+  color: #c0a483;
+}
+#nonresponsive #general-header .header-all .icon {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+#nonresponsive #general-header .header-all .icon .iconsall {
+  display: flex;
+  gap: 20px;
+}
+#nonresponsive #general-header .header-all .icon .iconsall .dropdownsearchcontact {
+  position: absolute;
+  top: 100px;
+  right: 40px;
+  box-shadow: 0 5px 5px 0 rgba(50, 50, 50, 0.2);
+  z-index: 2222;
+  padding: 40px 20px;
+  width: 25%;
+  background-color: white;
+}
+#nonresponsive #general-header .header-all .icon .iconsall .dropdownsearchcontact input {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  padding: 0 40px;
+  border: 1px solid #e1e1e1;
+  outline: none;
+}
+#nonresponsive #general-header .header-all .icon .iconsall .dropdownsearchcontact i {
+  position: absolute;
+  z-index: 22;
+  left: 30px;
+  top: 50%;
+  font-size: 20px;
+  transform: translateY(-50%);
+}
+#nonresponsive #general-header .header-all .icon .iconsall a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  opacity: 0.8;
+}
+#nonresponsive #general-header .header-all .icon .iconsall a .basket {
+  position: absolute;
+  top: -7px;
+  right: -17px;
+  width: 18px;
+  height: 19px;
+  line-height: 18px;
+  color: white;
+  font-size: 11px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #ac8b66;
+}
+#nonresponsive #general-header .header-all .icon .iconsall a i {
+  transition: 0.5s;
+}
+#nonresponsive #general-header .header-all .icon .iconsall a i:hover {
+  cursor: pointer;
+  transform: translateY(-10%);
+  color: #ac8b66;
+}
+#nonresponsive #general-header .header-all .icon .loginreg .logincontact {
+  margin-top: 10px;
+  width: 25%;
+  height: auto;
+  padding: 30px;
+  text-align: left;
+  border-top: 2px solid #c0a483;
+  position: absolute;
+  z-index: 222;
+  right: 10%;
+  background-color: #fff;
+}
+#nonresponsive #general-header .header-all .icon .loginreg .logincontact .accountcontent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#nonresponsive #general-header .header-all .icon .loginreg .logincontact .accountcontent h2 {
+  font-size: 20px;
+  font-weight: 400;
+  display: inline-block;
+  margin: 0;
+  color: #000;
+  font-family: "Marcellus", serif;
+}
+#nonresponsive #general-header .header-all .icon .loginreg .logincontact .accountcontent span {
+  border: 0;
+  font-size: 16px;
+  color: #c0a483;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  font-family: "Marcellus", serif;
+}
+#nonresponsive #general-header .header-all .icon .loginreg .logincontact .accountform label {
+  margin: 20px 0 5px;
+  font-size: 15px;
+  font-weight: 500;
+  display: inline-block;
+  color: #8d8d8d;
+  letter-spacing: 0.5px;
+}
+#nonresponsive #general-header .header-all .icon .loginreg .logincontact .accountform label::after {
+  content: "*";
+  display: inline-block;
+  color: red;
+  margin: 9px 0 0 5px;
+  font-size: 20px;
+}
+#nonresponsive #general-header .header-all .icon .loginreg .logincontact .accountform input {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 20px;
+  font-size: 18px;
+  border: 1px solid #e1e1e1;
+  outline: none;
+}
+#nonresponsive #general-header .header-all .icon .loginreg .logincontact .accountremember {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#nonresponsive #general-header .header-all .icon .loginreg .logincontact .accountremember .remember {
+  display: flex;
+  align-items: center;
+}
+#nonresponsive #general-header .header-all .icon .loginreg .logincontact .accountremember .remember label {
+  color: #000;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 0 0 5px 10px;
+  font-size: 17px;
+}
+#nonresponsive #general-header .header-all .icon .loginreg .logincontact .accountremember .forgot a {
+  position: relative;
+  display: inline-block;
+  line-height: 1.75;
+  font-size: 15px;
+  color: black;
+  font-family: sans-serif;
+}
+#nonresponsive #general-header .header-all .icon .loginreg .logincontact .accountremember .forgot a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #000;
+}
+#nonresponsive #general-header .header-all .icon .loginreg .logincontact button {
+  display: inline-block;
+  margin-top: 20px;
+  border: 0;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  font-family: "Marcellus", serif;
+  width: 100%;
+  height: 45px;
+  background-color: #000;
+}
+#nonresponsive #general-header .header-all .icon .loginreg .logincontact button:hover {
+  background-color: #c0a483;
+}
+#nonresponsive #general-header .header-all .icon .loginreg a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  opacity: 0.9;
+  letter-spacing: 1px;
+  font-family: "Marcellus", serif;
+}
+#nonresponsive #general-header .header-all .icon .loginreg a:hover {
+  color: #ac8b66;
+}
+#nonresponsive #general-header .header-all .logo img {
+  max-height: 22px;
+  width: auto;
+  color: #000;
+}
+
+#Responsiv {
+  background-color: #fff;
+  display: none;
+}
+#Responsiv .resheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+#Responsiv .resheader .baskettres a {
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+  opacity: 0.8;
+}
+#Responsiv .resheader .baskettres a .basket {
+  position: absolute;
+  top: -7px;
+  right: -17px;
+  width: 18px;
+  height: 19px;
+  line-height: 18px;
+  color: white;
+  font-size: 11px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #ac8b66;
+}
+#Responsiv .resheader .logocenter img {
+  fill: #000 !important;
+  max-height: 22px;
+  width: auto;
+}
+#Responsiv .resheader .burgermenu i {
+  color: #000;
+  font-size: 20px;
+}
+
+#Map {
+  width: 100%;
+  height: 100vh;
+}
+#Map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#CustomerService .service-all .servicecontent {
+  margin-top: 60px;
+}
+@media (max-width: 992px) {
+  #CustomerService .service-all .servicecontent {
+    text-align: center;
+  }
+}
+#CustomerService .service-all .servicecontent .stopcontent h2 {
+  font-family: "Marcellus", Sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+#CustomerService .service-all .servicecontent .stopcontent p {
+  font-family: Open Sans, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #868686;
+  text-align: left;
+  display: inline-block;
+  margin: 0 0 40px;
+  width: 85%;
+}
+@media (max-width: 992px) {
+  #CustomerService .service-all .servicecontent .stopcontent p {
+    text-align: center;
+  }
+}
+#CustomerService .service-all .servicecontent .sbottomcontent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+#CustomerService .service-all .servicecontent .sbottomcontent .info {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 992px) {
+  #CustomerService .service-all .servicecontent .sbottomcontent .info {
+    flex-direction: column;
+  }
+}
+#CustomerService .service-all .servicecontent .sbottomcontent .info .service-pht {
+  padding: 15px;
+  border: 1px solid #e3e3e3;
+  display: inline-block;
+}
+@media (max-width: 992px) {
+  #CustomerService .service-all .servicecontent .sbottomcontent .info .service-pht {
+    max-width: 15%;
+    margin: auto;
+  }
+}
+#CustomerService .service-all .servicecontent .sbottomcontent .info .service-pht svg {
+  width: 1em;
+  height: 1em;
+  font-size: 30px;
+}
+#CustomerService .service-all .servicecontent .sbottomcontent .info .info-content span {
+  font-family: "Marcellus", Sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+#CustomerService .service-all .servicecontent .sbottomcontent .info .info-content p {
+  font-family: Open Sans, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #868686;
+}
+#CustomerService .service-all .servicemessage {
+  transform: translateY(-100px);
+  background-color: #2A2B2D;
+  padding: 100px;
+  max-width: 100%;
+}
+@media (max-width: 992px) {
+  #CustomerService .service-all .servicemessage {
+    margin-top: 100px;
+  }
+}
+#CustomerService .service-all .servicemessage .message-contect {
+  margin-bottom: 30px;
+  text-align: center;
+}
+#CustomerService .service-all .servicemessage .message-contect svg {
+  fill: #FFFFFF;
+  width: 1em;
+  height: 1em;
+  display: block;
+  font-size: 55px;
+  margin: auto;
+}
+#CustomerService .service-all .servicemessage .message-contect h2 {
+  color: #FFFFFF;
+  font-family: "Marcellus", Sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+#CustomerService .service-all .servicemessage .messageInputs .infoinputs {
+  display: flex;
+  gap: 10px;
+}
+#CustomerService .service-all .servicemessage .messageInputs .infoinputs input {
+  width: 100%;
+  height: 50px;
+  font-size: 13px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  outline: none;
+  font-weight: 400;
+  border: 1px solid #3a3a3a;
+  background: transparent;
+}
+#CustomerService .service-all .servicemessage .messageInputs textarea {
+  width: 100%;
+  color: #fff;
+  max-height: 260px;
+  padding: 10px 20px;
+  font-weight: 400;
+  margin-bottom: 23px;
+  background: transparent;
+  outline: none;
+  border: 1px solid #3a3a3a;
+}
+#CustomerService .service-all .servicemessage .messageInputs button {
+  width: 100%;
+  height: 70px;
+  font-size: 1rem;
+  font-weight: 400;
+  border: none;
+  background-color: #6F6E6C;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Marcellus", serif;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+
+#SignUpContact {
+  padding: 50px 0;
+  background-color: #2A2B2D;
+}
+#SignUpContact .signUp-all .signcontent {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+@media (max-width: 1400px) {
+  #SignUpContact .signUp-all .signcontent {
+    margin-bottom: 30px;
+  }
+}
+#SignUpContact .signUp-all .signcontent .sgnicon i {
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  font-size: 52px;
+}
+#SignUpContact .signUp-all .signcontent .sgncontent h2 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 30px;
+  font-family: "Marcellus", Sans-serif;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+@media (max-width: 1400px) {
+  #SignUpContact .signUp-all .signcontent .sgncontent h2 {
+    font-size: 25px;
+  }
+}
+#SignUpContact .signUp-all .signcontent .sgncontent p {
+  font-size: 16px;
+  font-family: "Marcellus", Sans-serif;
+  color: #fff;
+}
+@media (max-width: 1400px) {
+  #SignUpContact .signUp-all .signcontent .sgncontent p {
+    font-size: 13px;
+  }
+}
+#SignUpContact .signUp-all .signinputscontact {
+  width: 100%;
+  height: 90px;
+  background-color: #fff;
+}
+#SignUpContact .signUp-all .signinputscontact .messagetoclientcontact {
+  width: 100%;
+  border: 2px solid #ffb900;
+  margin: 3em 0.5em 1em;
+  padding: 0.2em 1em;
+  color: #fff;
+}
+#SignUpContact .signUp-all .signinputscontact .errorcontact {
+  display: block;
+  position: absolute;
+  left: 51%;
+  font-size: 14PX;
+  color: #DC3232;
+}
+#SignUpContact .signUp-all .signinputscontact input {
+  width: 75%;
+  padding: 15px;
+  border: none;
+  outline: none;
+  padding-left: 30px;
+}
+#SignUpContact .signUp-all .signinputscontact input::-moz-placeholder {
+  font-size: 18px;
+}
+#SignUpContact .signUp-all .signinputscontact input:-ms-input-placeholder {
+  font-size: 18px;
+}
+#SignUpContact .signUp-all .signinputscontact input::placeholder {
+  font-size: 18px;
+}
+#SignUpContact .signUp-all .signinputscontact button {
+  text-align: center;
+  width: 20%;
+  padding: 15px 25px;
+  background-color: #ac8b66;
+  border: none;
+  color: white;
+  font-family: "Marcellus", Sans-serif;
+}
+
+Footer #Mainfooter {
+  background-color: #F6F6F6;
+  padding: 60px 0;
+  overflow: hidden;
+}
+Footer #Mainfooter .footerall .sectionfooter {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 992px) {
+  Footer #Mainfooter .footerall .sectionfooter {
+    margin-bottom: 30px;
+  }
+}
+Footer #Mainfooter .footerall .sectionfooter .footericons {
+  display: flex;
+  gap: 10px;
+}
+Footer #Mainfooter .footerall .sectionfooter .footericons i {
+  border: 1px solid #e1e1e1;
+  border-radius: 50%;
+  padding: 15px;
+}
+Footer #Mainfooter .footerall .sectionfooter h2 {
+  font-family: "Marcellus", Sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 25px;
+}
+Footer #Mainfooter .footerall .sectionfooter a {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 40px;
+  color: #868686;
+}
+Footer #Mainfooter .footerall .sectionfooter p {
+  font-family: sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #868686;
+  width: 80%;
+}
+Footer #Mainfooter .footerall .sectionfooter p span {
+  font-weight: 600;
+  color: #000;
+}
+Footer hr {
+  opacity: 0.2;
+}
+Footer #Secondfooter {
+  padding: 10px 0;
+  background-color: #F6F6F6;
+}
+Footer #Secondfooter .secondfooter .Copyright span {
+  font-family: sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #868686;
+}
+Footer #Secondfooter .secondfooter .clearpay {
+  display: flex;
+  justify-content: flex-end;
+}/*# sourceMappingURL=contact.css.map */
